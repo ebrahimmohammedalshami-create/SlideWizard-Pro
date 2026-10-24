@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>SlideWizard Pro</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 320px;
+      background: #0f172a;
+      color: #f8fafc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 16px;
+      user-select: none;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+    .title-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .icon {
+      font-size: 20px;
+    }
+    .title {
+      font-size: 15px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+    .badge {
+      font-size: 10px;
+      background: #0284c7;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .btn-launch {
+      width: 100%;
+      background: linear-gradient(135deg, #16a34a, #15803d);
+      color: white;
+      border: 1px solid #22c55e;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(22, 163, 74, 0.4);
+      transition: all 0.2s;
+    }
+    .btn-launch:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(22, 163, 74, 0.6);
+    }
+    .btn-launch:active {
+      transform: translateY(1px);
+    }
+    .shortcut-hint {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    .shortcut-hint kbd {
+      background: #1e293b;
+      border: 1px solid #475569;
+      color: #38bdf8;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-weight: bold;
+    }
+    .features-list {
+      margin-top: 14px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 11px;
+      color: #cbd5e1;
+    }
+    .features-list div {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer {
+      margin-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: #64748b;
+    }
+    .footer a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title-group">
+      <span class="icon">⚡</span>
+      <span class="title">SlideWizard Pro</span>
+    </div>
+    <span class="badge">v2.0</span>
+  </div>
+
+  <button class="btn-launch" id="btn-launch">
+    <span>🚀 تشغيل لوحة التصوير الآن</span>
+  </button>
+
+  <div class="shortcut-hint">
+    أو اضغط <kbd>Alt + S</kbd> في أي وقت
+  </div>
+
+  <div class="features-list">
+    <div><span>🖱️</span><span>مستطيل أخضر تفاعلي بـ 8 مقابض بالماوس</span></div>
+    <div><span>🧠</span><span>كاشف التكرار الذكي ومنع الشرائح المكررة</span></div>
+    <div><span>📄</span><span>تصدير فوري إلى PDF و PPTX و ZIP</span></div>
+    <div><span>💾</span><span>حفظ دائم للإعدادات والمواقع تلقائياً</span></div>
+  </div>
+
+  <div class="footer">
+    <span>محلي وآمن 100% 🔒</span>
+    <a href="http://localhost:3000" target="_blank" id="link-dashboard">المجلد المحلي 📁</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "SlideWizard Pro - مصور العروض الذكي",
+  "version": "2.0.0",
+  "description": "التقاط وتصوير شرائح العروض التقديمية ودورات الـ SCORM تلقائياً وتصديرها إلى PDF و PowerPoint (PPTX) و صور ZIP بنقرة واحدة وبدقة فائقة.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "SlideWizard Pro - تشغيل مصور الشرائح"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "toggle_wizard": {
+      "suggested_key": {
+        "default": "Alt+S"
+      },
+      "description": "تشغيل أو إخفاء لوحة تصوير الشرائح"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "libs/jspdf.umd.min.js",
+        "libs/jszip.min.js",
+        "libs/pptxgen.bundle.js",
+        "icons/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
